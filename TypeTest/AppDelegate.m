@@ -16,6 +16,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    BOOL boolVarTrue = YES; // bit value 1
+    
+    BOOL boolVarFalse = NO; // bit value 0
+    
+    NSInteger intVar = 10;
+   
+    NSUInteger uIntVar = 100;
+    
+    CGFloat floatVar = 1.5f;
+    
+    double doubleVar = 2.2f;
+    
+    NSLog(@"boolVarTrue = %d, boolVarFalse = %d, intVar = %ld, uIntVar = %ld, floatVar = %f, doubleVar = %f", boolVarTrue, boolVarFalse, intVar, uIntVar, floatVar, doubleVar);
+    
+    NSLog(@"boolVarTrue = %ld, boolVarFalse = %ld, intVar = %ld, uIntVar = %ld, floatVar = %ld, doubleVar = %ld", sizeof(boolVarTrue), sizeof(boolVarFalse), sizeof(intVar), sizeof(uIntVar), sizeof(floatVar), sizeof(doubleVar));
+    
+    
     return YES;
 }
 
