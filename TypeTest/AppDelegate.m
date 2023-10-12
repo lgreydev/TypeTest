@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SLStudent.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    /*
     BOOL boolVarTrue = YES; // bit value 1
     
     BOOL boolVarFalse = NO; // bit value 0
@@ -32,7 +34,19 @@
     NSLog(@"boolVarTrue = %d, boolVarFalse = %d, intVar = %ld, uIntVar = %ld, floatVar = %f, doubleVar = %f", boolVarTrue, boolVarFalse, intVar, uIntVar, floatVar, doubleVar);
     
     NSLog(@"boolVarTrue = %ld, boolVarFalse = %ld, intVar = %ld, uIntVar = %ld, floatVar = %ld, doubleVar = %ld", sizeof(boolVarTrue), sizeof(boolVarFalse), sizeof(intVar), sizeof(uIntVar), sizeof(floatVar), sizeof(doubleVar));
+    */
     
+    SLStudent* studentA = [[SLStudent alloc] init];
+    
+    studentA.name = @"Best Student";
+ 
+    SLStudent* studentB = studentA;
+    
+    studentB.name = @"Bad Student";
+    
+    NSLog(@"StudentA name = %@", studentA.name);
+    
+    NSLog(@"StudentB name = %@", studentB.name);
     
     return YES;
 }
