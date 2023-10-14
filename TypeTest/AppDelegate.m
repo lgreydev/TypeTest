@@ -50,6 +50,7 @@
     NSLog(@"StudentB name = %@", studentB.name);
     */
     
+    /*
     NSInteger a = 10;
     
     NSLog(@"a = %ld", a);
@@ -71,6 +72,17 @@
     NSInteger result = [self test:a testPointer:&test];
     
     NSLog(@"result = %ld, test = %ld", result, test);
+     */
+    
+    SLStudent* student = [[SLStudent alloc] init];
+    
+    [student setGender:(SLGenderMale)];
+    
+    NSLog(@"Student gender = %d", student.gender);
+    
+    [student setGender:(SLGenderFemale)];
+    
+    NSLog(@"Student gender = %d", student.gender);
     
     return YES;
 }

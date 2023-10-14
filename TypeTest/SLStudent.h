@@ -9,9 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum {
+    SLGenderMale,
+    SLGenderFemale
+} SLGender;
+
 @interface SLStudent : NSObject
 
 @property (strong, nonatomic) NSString* name;
+
+@property (assign, nonatomic) SLGender gender;
 
 @end
 
