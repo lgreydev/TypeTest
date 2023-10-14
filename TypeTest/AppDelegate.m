@@ -36,6 +36,7 @@
     NSLog(@"boolVarTrue = %ld, boolVarFalse = %ld, intVar = %ld, uIntVar = %ld, floatVar = %ld, doubleVar = %ld", sizeof(boolVarTrue), sizeof(boolVarFalse), sizeof(intVar), sizeof(uIntVar), sizeof(floatVar), sizeof(doubleVar));
     */
     
+    /*
     SLStudent* studentA = [[SLStudent alloc] init];
     
     studentA.name = @"Best Student";
@@ -47,10 +48,37 @@
     NSLog(@"StudentA name = %@", studentA.name);
     
     NSLog(@"StudentB name = %@", studentB.name);
+    */
+    
+    NSInteger a = 10;
+    
+    NSLog(@"a = %ld", a);
+    
+    NSInteger b = a;
+    
+    b = 5;
+    
+    NSLog(@"a = %ld, b = %ld", a, b);
+    
+    NSInteger * c = &a;
+    
+    *c = 8;
+    
+    NSLog(@"a = %ld, b = %ld", a, b);
+    
+    NSInteger test = 0;
+    
+    NSInteger result = [self test:a testPointer:&test];
+    
+    NSLog(@"result = %ld, test = %ld", result, test);
     
     return YES;
 }
 
+- (NSInteger) test:(NSInteger) test testPointer:(NSInteger*) testPointer {
+    *testPointer = 5;
+    return test;
+}
 
 #pragma mark - UISceneSession lifecycle
 
