@@ -74,6 +74,7 @@
     NSLog(@"result = %ld, test = %ld", result, test);
      */
     
+    /*
     SLStudent* student = [[SLStudent alloc] init];
     
     [student setGender:(SLGenderMale)];
@@ -83,6 +84,32 @@
     [student setGender:(SLGenderFemale)];
     
     NSLog(@"Student gender = %d", student.gender);
+    */
+    
+    /*
+    CGPoint point;
+    
+    point.x = 5.5f;
+    point.y = 10;
+    
+    point = CGPointMake(6, 3);
+    
+    CGSize size;
+    
+    size.width = 10;
+    size.height = 5;
+    
+    CGRect rect;
+    
+    rect.origin = point;
+    rect.size = size;
+    
+    rect = CGRectMake(0, 0, 7, 4);
+    
+    BOOL result = CGRectContainsPoint(rect, point);
+    
+    NSLog(@"result - %d", result);
+     */
     
     return YES;
 }
