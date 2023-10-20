@@ -111,6 +111,32 @@
     NSLog(@"result - %d", result);
      */
     
+    
+    BOOL boolVar = YES;
+    
+    NSInteger intVar = 10;
+   
+    NSUInteger uIntVar = 100;
+    
+    CGFloat floatVar = 1.5f;
+    
+    double doubleVar = 2.2f;
+    
+    NSNumber* boolObject = [NSNumber numberWithBool:boolVar];
+    NSNumber* intObject = [NSNumber numberWithInteger:intVar];
+    NSNumber* uInObject = [NSNumber numberWithUnsignedInteger:uIntVar];
+    NSNumber* foatObject = [NSNumber numberWithFloat: floatVar];
+    NSNumber* doubleObject = [NSNumber numberWithDouble:doubleVar];
+    
+    NSArray* array = [NSArray arrayWithObjects:boolObject, intObject, uInObject, foatObject, doubleObject, nil];
+    
+    NSLog(@"boolVar = %d, intObject = %ld, uIntVar = %ld foatObject = %f, doubleObject = %f",
+          [[array objectAtIndex:0] boolValue],
+          [[array objectAtIndex:1] integerValue],
+          [[array objectAtIndex:2] unsignedIntegerValue],
+          [[array objectAtIndex:3] floatValue],
+          [[array objectAtIndex:4] doubleValue]);
+    
     return YES;
 }
 
