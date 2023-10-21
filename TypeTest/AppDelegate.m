@@ -111,7 +111,7 @@
     NSLog(@"result - %d", result);
      */
     
-    
+    /*
     BOOL boolVar = YES;
     
     NSInteger intVar = 10;
@@ -136,6 +136,33 @@
           [[array objectAtIndex:2] unsignedIntegerValue],
           [[array objectAtIndex:3] floatValue],
           [[array objectAtIndex:4] doubleValue]);
+    */
+    
+    CGPoint point1 = CGPointMake(0, 5);
+    CGPoint point2 = CGPointMake(4, 2);
+    CGPoint point3 = CGPointMake(3, 8);
+    CGPoint point4 = CGPointMake(7, 1);
+    CGPoint point5 = CGPointMake(2, 6);
+    
+    NSArray* array = [NSArray arrayWithObjects:
+                      [NSValue valueWithCGPoint:point1],
+                      [NSValue valueWithCGPoint:point2],
+                      [NSValue valueWithCGPoint:point3],
+                      [NSValue valueWithCGPoint:point4],
+                      [NSValue valueWithCGPoint:point5], 
+                      nil];
+    
+    NSLog(@"point1 = %@, point2 = %@, point3 = %@, point4 = %@, point5 = %@",
+          [array objectAtIndex:0],
+          [array objectAtIndex:1],
+          [array objectAtIndex:2],
+          [array objectAtIndex:3],
+          [array objectAtIndex:4]);
+    
+    for (NSValue* value in array) {
+        CGPoint point = [value CGPointValue];
+        NSLog(@"point = %@", NSStringFromCGPoint(point));
+    }
     
     return YES;
 }
